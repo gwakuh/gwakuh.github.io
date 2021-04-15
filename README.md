@@ -1,1 +1,0 @@
-# gwakuh.github.io

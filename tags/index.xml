@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
+    <title>Tags on gwakuh</title>
     <link>https://gwakuh.github.io/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <description>Recent content in Tags on gwakuh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://gwakuh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Apr 2021 11:27:31 +0900</lastBuildDate><atom:link href="https://gwakuh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C</title>
+      <link>https://gwakuh.github.io/tags/c/</link>
+      <pubDate>Thu, 29 Apr 2021 11:27:31 +0900</pubDate>
+      
+      <guid>https://gwakuh.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Programming</title>
+      <link>https://gwakuh.github.io/tags/network-programming/</link>
+      <pubDate>Thu, 29 Apr 2021 11:27:31 +0900</pubDate>
+      
+      <guid>https://gwakuh.github.io/tags/network-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TAP</title>
+      <link>https://gwakuh.github.io/tags/tap/</link>
+      <pubDate>Thu, 29 Apr 2021 11:27:31 +0900</pubDate>
+      
+      <guid>https://gwakuh.github.io/tags/tap/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

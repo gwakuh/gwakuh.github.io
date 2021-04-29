@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>gwakuh</title>
-    <link>https://gwakuh.github.io/</link>
-    <description>Recent content on gwakuh</description>
+    <title>Network Programming on gwakuh</title>
+    <link>https://gwakuh.github.io/categories/network-programming/</link>
+    <description>Recent content in Network Programming on gwakuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Apr 2021 11:27:31 +0900</lastBuildDate><atom:link href="https://gwakuh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Apr 2021 11:27:31 +0900</lastBuildDate><atom:link href="https://gwakuh.github.io/categories/network-programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TAP Device</title>
       <link>https://gwakuh.github.io/posts/tap_device/</link>

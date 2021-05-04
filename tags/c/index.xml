@@ -15,9 +15,8 @@
       <guid>https://gwakuh.github.io/posts/tap_device/</guid>
       <description>TAP(Terminal Access Point) Device  Kernel Virtual Network Device
  물리적인 네트워크 인터페이스가 아닌 가상의 인터페이스를 생성할 때 사용한다.
-Send Packet 처음엔 raw socket을 만들어 sendto 함수로 전송하는 로직으로 시도하였으나, TAP Device를 UP 시켜도 LOWER_UP 상태가 아니라 전송이 안되는 것으로 보인다. (추측)
-찾아보니 TAP Device를 사용할 때는 송/수신 측을 모두 제어하게 될텐데 뭐하러 소켓 통신을 하냐는 의견을 보고 파일 디스크립터에 직접 write하는 방법을 채용했다.
-#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt; #include &amp;lt;fcntl.h&amp;gt;#include &amp;lt;linux/if_tun.</description>
+인터페이스 생성  OS 버전: CentOS 7 iproute version 4.11.0  # ip tuntap add mode tap tap1 # ip link set tap1 up iproute 2.6.34 이전 버전의 경우 ip tuntap 명령을 지원하지 않음
+패킷 전송 처음엔 raw socket을 만들어 sendto 함수로 전송하는 로직으로 시도하였으나, TAP Device를 UP 시켜도 LOWER_UP 상태가 아니라 전송이 안되는 것으로 보인다.</description>
     </item>
     
   </channel>

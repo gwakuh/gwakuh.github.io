@@ -2,21 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on gwakuh</title>
-    <link>https://gwakuh.github.io/posts/</link>
+    
+    
+    
+    <link>/posts/</link>
     <description>Recent content in Posts on gwakuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Apr 2021 11:27:31 +0900</lastBuildDate><atom:link href="https://gwakuh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Apr 2021 11:27:31 +0900</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>TAP Device</title>
-      <link>https://gwakuh.github.io/posts/tap_device/</link>
+      <link>/posts/tap_device/</link>
       <pubDate>Thu, 29 Apr 2021 11:27:31 +0900</pubDate>
       
-      <guid>https://gwakuh.github.io/posts/tap_device/</guid>
-      <description>TAP(Terminal Access Point) Device  Kernel Virtual Network Device
- 물리적인 네트워크 인터페이스가 아닌 가상의 인터페이스를 생성할 때 사용한다.
-인터페이스 생성  OS 버전: CentOS 7 iproute version 4.11.0  # ip tuntap add mode tap tap1 # ip link set tap1 up iproute 2.6.34 이전 버전의 경우 ip tuntap 명령을 지원하지 않음
-패킷 전송 처음엔 raw socket을 만들어 sendto 함수로 전송하는 로직으로 시도하였으나, TAP Device를 UP 시켜도 LOWER_UP 상태가 아니라 전송이 안되는 것으로 보인다.</description>
+      <guid>/posts/tap_device/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          In computer networking, TUN and TAP are kernel virtual network devices. Being network devices supported entirely in software, they differ from ordinary network devices which are backed by physical network adapters.
+          
+        
+        </description>
     </item>
     
   </channel>

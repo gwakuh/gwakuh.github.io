@@ -2,18 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on gwakuh</title>
-    <link>https://gwakuh.github.io/categories/</link>
+    
+    
+    
+    <link>/categories/</link>
     <description>Recent content in Categories on gwakuh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Apr 2021 11:27:31 +0900</lastBuildDate><atom:link href="https://gwakuh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Apr 2021 11:27:31 +0900</lastBuildDate>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Network Programming</title>
-      <link>https://gwakuh.github.io/categories/network-programming/</link>
+      <link>/categories/network-programming/</link>
       <pubDate>Thu, 29 Apr 2021 11:27:31 +0900</pubDate>
       
-      <guid>https://gwakuh.github.io/categories/network-programming/</guid>
-      <description></description>
+      <guid>/categories/network-programming/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
     </item>
     
   </channel>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on gwakuh</title>
+    
+    
+    
+    <link>/data/</link>
+    <description>Recent content in Data on gwakuh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/data/ipv6_pd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/data/ipv6_pd/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          graph TDsubgraph ISP NetworkISP{{ISP Core Network}} --&amp;gt; AD[&amp;quot;Aggregation Device&amp;lt;br&amp;gt;(Delegating Router)&amp;quot;]endAD -- DSL to subscriber premises --&amp;gt; CPE[&amp;quot;CPE&amp;lt;br&amp;gt;(Requesting Router)&amp;quot;]subgraph Subscriber NetworkCPE --&amp;gt; PC1[Subscriber&amp;lt;br&amp;gt;PC]CPE --&amp;gt; PC2[Subscriber&amp;lt;br&amp;gt;PC]CPE --&amp;gt; PC3[Subscriber&amp;lt;br&amp;gt;PC]CPE --&amp;gt; PC4[Subscriber&amp;lt;br&amp;gt;PC]end
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>

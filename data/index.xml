@@ -15,6 +15,26 @@
     
     <item>
       <title></title>
+      <link>/data/ipv6_dslite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/data/ipv6_dslite/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          sequenceDiagramPC -&amp;gt;&amp;gt;+ CPE: Src IPv4 192.168.0.10&amp;lt;br&amp;gt;Dst IPv4 4.3.2.1&amp;lt;br&amp;gt;HTTP RequestCPE -&amp;gt;&amp;gt;+ CGN: Src IPv6 3FFE:FFFF:0:2::2&amp;lt;br&amp;gt;Dst IPv6 3FFE:FFFF:50:50::10&amp;lt;br&amp;gt;Src IPv4 192.168.0.10&amp;lt;br&amp;gt;Dst IPv4 4.3.2.1&amp;lt;br&amp;gt;HTTP RequestCGN -&amp;gt;&amp;gt;+ 4.3.2.1: Src IPv4 123.123.123.123(NAT)&amp;lt;br&amp;gt;Dst IPv4 4.3.2.1&amp;lt;br&amp;gt;HTTP Request4.3.2.1 -&amp;gt;&amp;gt;- CGN: Src IPv4 4.3.2.1&amp;lt;br&amp;gt;Dst IPv4 123.123.123.123(NAT)&amp;lt;br&amp;gt;HTTP ResponseCGN -&amp;gt;&amp;gt;- CPE: Src IPv6 3FFE:FFFF:50:50::10&amp;lt;br&amp;gt;Dst IPv6 3FFE:FFFF:0:2::2&amp;lt;br&amp;gt;Src IPv4 4.3.2.1&amp;lt;br&amp;gt;Dst IPv4 192.168.0.10&amp;lt;br&amp;gt;HTTP ResponseCPE -&amp;gt;&amp;gt;- PC: Src IPv4 4.3.2.1&amp;lt;br&amp;gt;Dst IPv4 192.168.0.10&amp;lt;br&amp;gt;HTTP Response
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>/data/ipv6_pd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

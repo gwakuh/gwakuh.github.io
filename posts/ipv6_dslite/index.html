@@ -3,7 +3,7 @@
   <head>
     
       <title>
-        IPv6 PD ::
+        IPv6 DS-Lite ::
         gwakuh — blog
       </title>
     
@@ -11,18 +11,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content="IPv6 PD(Prefix Delegation) Prefix Delegation(이하 PD) 기능은 DHCP 서버가 보유한 IP Pool에 포함되어 있는 IP를 특정 DHCP 클라이언트에 Prefix를 지정하여 할당하는 기능이다.
-IPv6 PD를 할당받은 DHCP 클라이언트는 할당받은 IP 대역 내에서 LAN에 IPv6 주소를 구성할 수 있다.
+  content="IPv6 DS-Lite(Dual-Stack Lite)  IPv6 DS-Lite 기술은 CPE(Customer-premises equipment)에게 공인 IPv4를 할당하지 않고 IPv4를 사용하는 원격지에 연결할 수 있게 하는 기술
+ ​
+IP 할당 IPv6 DS-Lite 기술은 IPv4, IPv6 Dual-Stack과 달리 CPE에 공인 IPv4를 할당하지 않고 공인 IPv6만 할당하여 관리하고 CPE는 LAN 클라이언트에 사설 IPv4를 할당하여 LAN을 구축한다.
 ​
-Example 만약 Delegating Router가 Requesting Router에 3FFE:FFFF:0::/48을 위임한 경우 Requesting Router는 각각의 PC에 3FFE:FFFF:0:1::/64, 3FFE:FFFF:0:2::/64와 같이 위임받은 48-bit 이상의 Prefix를 부여하여 네트워크를 할당할 수 있다.
-일반적으로 IPv6를 사용하는 ISP에선 정책상 가입자 회선에 64-bit를 위임하곤 한다."
+동작 방식 단말에서 IPv4로 요청을 수행하면, CPE는 해당 패킷을 IPv6로 캡슐화하여 ISP의 CGN(Carrier-grade NAT)로 패킷을 포워딩한다.
+CGN은 공인 IPv6, 사설 IPv4로 구성된 패킷을 IPv4 패킷으로 재구성하며, IPv4 NAT를 통해 공인 IPv4로 라우팅한다."
 />
 <meta
   name="keywords"
   content=""
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="/posts/ipv6_pd/" />
+<link rel="canonical" href="/posts/ipv6_dslite/" />
 
 
 
@@ -50,17 +51,17 @@ Example 만약 Delegating Router가 Requesting Router에 3FFE:FFFF:0::/48을 위
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="IPv6 PD"/>
-<meta name="twitter:description" content="The Prefix Delegation options provide a mechanism for automated delegation of IPv6 prefixes using the Dynamic Host Configuration Protocol (DHCP)."/>
+<meta name="twitter:title" content="IPv6 DS-Lite"/>
+<meta name="twitter:description" content="IPv6 DS-Lite 기술은 가입자에게 공인 IPv4를 할당하지 않고 IPv4를 사용하는 원격지에 연결할 수 있게 하는 기술"/>
 
 
 
-<meta property="og:title" content="IPv6 PD" />
-<meta property="og:description" content="The Prefix Delegation options provide a mechanism for automated delegation of IPv6 prefixes using the Dynamic Host Configuration Protocol (DHCP)." />
+<meta property="og:title" content="IPv6 DS-Lite" />
+<meta property="og:description" content="IPv6 DS-Lite 기술은 가입자에게 공인 IPv4를 할당하지 않고 IPv4를 사용하는 원격지에 연결할 수 있게 하는 기술" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/ipv6_pd/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-05-11T16:46:23&#43;09:00" />
-<meta property="article:modified_time" content="2021-05-11T16:46:23&#43;09:00" /><meta property="og:site_name" content="gwakuh" />
+<meta property="og:url" content="/posts/ipv6_dslite/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-18T16:01:30&#43;09:00" />
+<meta property="article:modified_time" content="2021-05-18T16:01:30&#43;09:00" /><meta property="og:site_name" content="gwakuh" />
 
 
 
@@ -156,11 +157,11 @@ Example 만약 Delegating Router가 Requesting Router에 3FFE:FFFF:0::/48을 위
   
 
   <div class="post">
-    <h1 class="post-title">IPv6 PD</h1>
+    <h1 class="post-title">IPv6 DS-Lite</h1>
     <div class="post-meta">
       
         <span class="post-date">
-          2021-05-11
+          2021-05-18
         </span>
 
         
@@ -181,7 +182,7 @@ Example 만약 Delegating Router가 Requesting Router에 3FFE:FFFF:0::/48을 위
         
           <a href="/tags/ipv6/">#IPv6</a>&nbsp;
         
-          <a href="/tags/ipv6-pd/">#IPv6 PD</a>&nbsp;
+          <a href="/tags/ipv6-dslite/">#IPv6 DSLite</a>&nbsp;
         
       </span>
     
@@ -190,17 +191,27 @@ Example 만약 Delegating Router가 Requesting Router에 3FFE:FFFF:0::/48을 위
 
     <div class="post-content">
       
-      <h1 id="ipv6-pdprefix-delegation">IPv6 PD(Prefix Delegation)</h1>
-<p>Prefix Delegation(이하 PD) 기능은 DHCP 서버가 보유한 IP Pool에 포함되어 있는 IP를 특정 DHCP 클라이언트에 Prefix를 지정하여 할당하는 기능이다.</p>
-<p>IPv6 PD를 할당받은 DHCP 클라이언트는 할당받은 IP 대역 내에서 LAN에 IPv6 주소를 구성할 수 있다.</p>
+      <h1 id="ipv6-ds-litedual-stack-lite">IPv6 DS-Lite(Dual-Stack Lite)</h1>
+<blockquote>
+<p>IPv6 DS-Lite 기술은 <a href="https://ko.wikipedia.org/wiki/%EA%B3%A0%EA%B0%9D_%EB%8C%81%EB%82%B4_%EC%9E%A5%EC%B9%98">CPE</a>(Customer-premises equipment)에게 공인 IPv4를 할당하지 않고 IPv4를 사용하는 원격지에 연결할 수 있게 하는 기술</p>
+</blockquote>
 <p>​</p>
-<h2 id="example">Example</h2>
-<p><img src="/images/ipv6_pd.png" alt=""></p>
-<p>만약 Delegating Router가 Requesting Router에 3FFE:FFFF:0::/48을 위임한 경우 Requesting Router는 각각의 PC에 3FFE:FFFF:0:1::/64, 3FFE:FFFF:0:2::/64와 같이 위임받은 48-bit 이상의 Prefix를 부여하여 네트워크를 할당할 수 있다.</p>
-<p>일반적으로 IPv6를 사용하는 ISP에선 정책상 가입자 회선에 64-bit를 위임하곤 한다.</p>
+<h2 id="ip-할당">IP 할당</h2>
+<p>IPv6 DS-Lite 기술은 IPv4, IPv6 Dual-Stack과 달리 CPE에 공인 IPv4를 할당하지 않고 공인 IPv6만 할당하여 관리하고 CPE는 LAN 클라이언트에 사설 IPv4를 할당하여 LAN을 구축한다.</p>
+<p>​</p>
+<h2 id="동작-방식">동작 방식</h2>
+<p><img src="/images/ipv6_dslite.png" alt=""></p>
+<p>단말에서 IPv4로 요청을 수행하면, CPE는 해당 패킷을 IPv6로 캡슐화하여 ISP의 CGN(Carrier-grade NAT)로 패킷을 포워딩한다.</p>
+<p>CGN은 공인 IPv6, 사설 IPv4로 구성된 패킷을 IPv4 패킷으로 재구성하며, IPv4 NAT를 통해 공인 IPv4로 라우팅한다.</p>
+<p>CGN은 CPE의 공인 IPv6, 사설 IPv4, 포트 번호 등으로 NAT 테이블을 구성하여 응답 패킷에 대해서 NAT된 IPv4를 CPE의 공인IPv6, 사설 IPv4 패킷으로 재구성하여 CPE로 전송하고, CPE는 IPv6 헤더를 역캡슐화하여 단말로 보낸다.</p>
+<p>​</p>
+<blockquote>
+<p>AFTR(Address Family Transition Router) 등을 이용하여 CGN 구성</p>
+</blockquote>
 <p>​</p>
 <hr>
-<p>RFC 3633: <a href="https://datatracker.ietf.org/doc/html/rfc3633">https://datatracker.ietf.org/doc/html/rfc3633</a></p>
+<p>RFC 6333: <a href="https://datatracker.ietf.org/doc/html/rfc6333">https://datatracker.ietf.org/doc/html/rfc6333</a></p>
+<p>RFC 7870: <a href="https://datatracker.ietf.org/doc/html/rfc7870">https://datatracker.ietf.org/doc/html/rfc7870</a></p>
 
     </div>
     
@@ -214,17 +225,10 @@ Example 만약 Delegating Router가 Requesting Router에 3FFE:FFFF:0::/48을 위
           </div>
           <div class="pagination__buttons">
             
-              <span class="button previous">
-                <a href="/posts/ipv6_dslite/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">IPv6 DS-Lite</span>
-                </a>
-              </span>
-            
             
               <span class="button next">
-                <a href="/posts/tap_device/">
-                  <span class="button__text">TAP Device</span>
+                <a href="/posts/ipv6_pd/">
+                  <span class="button__text">IPv6 PD</span>
                   <span class="button__icon">→</span>
                 </a>
               </span>

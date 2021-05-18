@@ -205,6 +205,10 @@ CGN은 공인 IPv6, 사설 IPv4로 구성된 패킷을 IPv4 패킷으로 재구�
 <p>CGN은 공인 IPv6, 사설 IPv4로 구성된 패킷을 IPv4 패킷으로 재구성하며, IPv4 NAT를 통해 공인 IPv4로 라우팅한다.</p>
 <p>CGN은 CPE의 공인 IPv6, 사설 IPv4, 포트 번호 등으로 NAT 테이블을 구성하여 응답 패킷에 대해서 NAT된 IPv4를 CPE의 공인IPv6, 사설 IPv4 패킷으로 재구성하여 CPE로 전송하고, CPE는 IPv6 헤더를 역캡슐화하여 단말로 보낸다.</p>
 <p>​</p>
+<h2 id="패킷-형태">패킷 형태</h2>
+<p><img src="/images/ipv6_dslite_packet.png" alt=""></p>
+<p>이더넷 헤더 다음에 IPv6 헤더가 위치하고 IPv6 헤더의 Next Header 필드에 0x04(IPIP) 값이 포함되어 다음 위치하는 헤더가 TCP, UDP 등 다른 프로토콜이 아닌 IPv4 헤더임을 나타낸다.</p>
+<p>​</p>
 <hr>
 <p>RFC 6333: <a href="https://datatracker.ietf.org/doc/html/rfc6333">https://datatracker.ietf.org/doc/html/rfc6333</a></p>
 

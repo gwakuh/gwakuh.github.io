@@ -1,0 +1,263 @@
+html {
+	-webkit-print-color-adjust: exact;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+	color: rgb(55, 53, 47);
+}
+
+.blank { min-height: 1.5em; }
+
+a,
+a:visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.project-intro > :first-child { margin-top: 0; }
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+li + li { margin-top: 0.6em; }
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.sans {
+	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.highlight-blue,
+.project-label {
+	background: transparent;
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+
+.company-description {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+
+.project-title {
+	background: rgb(229, 242, 252);
+	font-size: 16px;
+}
+
+.label {
+	text-align: right;
+	padding-right: 2em;
+}
+
+.callout {
+	display: flex;
+	width: 100%;
+	margin: 1.25em 0;
+	padding: 1rem;
+	border-radius: 10px;
+	background: rgb(240, 239, 237);
+}
+
+.callout-icon {
+	margin-right: 12px;
+	font-size: 1.5em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.project-details,
+.draft-details {
+	margin: 1.25em 0;
+}
+
+summary {
+	cursor: pointer;
+}
+
+.detail-body {
+	margin-left: 1.5em;
+}
+
+.draft-details {
+	padding: 0.5em 0.75em;
+	border-left: 3px solid rgba(125, 122, 117, 0.35);
+	background: rgba(125, 122, 117, 0.08);
+}
+
+.draft-indicator {
+	display: inline-block;
+	margin-top: 0;
+	padding: 0 0.35em;
+	border: 1px solid rgba(125, 122, 117, 0.35);
+	border-radius: 3px;
+	color: rgba(125, 122, 117, 1);
+	font-size: 0.75rem;
+}
+
+.year-month {
+	white-space: nowrap;
+}
+
+.draft-index {
+	padding: 0 1rem;
+}
+
+@media only print {
+	body { margin: 0; font-size: 12pt; }
+	.column { overflow: visible; }
+	.column-list { gap: 20px; }
+	.column-list:has(.image) { break-inside: avoid; }
+	.column-list:has(.draft-details) { break-inside: avoid; }
+	.label { padding-right: 0; white-space: normal; }
+	.blank, .draft-details, .draft-indicator { display: none; }
+	h1, h2, h3, summary, .project-title { break-after: avoid; }
+	.column p:has(> strong) { break-after: avoid; }
+	p, li { orphans: 3; widows: 3; }
+	.project-details { break-inside: auto; }
+	.project-intro { break-inside: avoid; }
+	.key-project-section-intro { break-inside: avoid; }
+	.project-details::details-content { display: block; content-visibility: visible; }
+	a { overflow-wrap: anywhere; }
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	size: A4;
+	margin: 1in;
+}
+
+@media only screen and (max-width: 940px) {
+	body { margin: 2em 20px; }
+}
+
+@media only screen and (max-width: 680px) {
+	body { margin: 24px 16px; }
+	.page-title { font-size: 2rem; }
+	.column-list { display: block; }
+	.column { width: 100% !important; overflow: visible; }
+	.column + .column { margin-top: 12px; }
+	.label { padding-right: 0; text-align: left; }
+	.image { text-align: left; }
+	.column:has(> .image) > .blank { display: none; }
+	.blank { min-height: 0.5em; }
+	a, p, li, summary { overflow-wrap: anywhere; }
+	.callout > div { min-width: 0; }
+}

@@ -22,7 +22,7 @@ body {
 }
 
 body {
-	line-height: 1.5;
+	line-height: 1.65;
 	white-space: pre-wrap;
 	color: rgb(55, 53, 47);
 }
@@ -59,6 +59,41 @@ h3 strong {
 
 .page-description {
 	margin-bottom: 2em;
+}
+
+.profile-intro {
+	margin: 2.5rem 0 4.5rem;
+}
+
+.profile-header {
+	align-items: flex-start;
+}
+
+.person-name {
+	margin: 0 0 1.25rem;
+}
+
+.profile-lead p {
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+.profile-contacts {
+	padding-left: 1.5rem;
+	border-left: 1px solid rgba(55, 53, 47, 0.12);
+}
+
+.profile-contacts p {
+	margin: 0 0 0.75rem;
+}
+
+.profile-summary {
+	max-width: 760px;
+	margin-top: 2rem;
+}
+
+.profile-summary p + p {
+	margin-top: 1rem;
 }
 
 h1 {
@@ -130,7 +165,7 @@ p {
 
 .image {
 	border: none;
-	margin: 1.5em 0;
+	margin: 0;
 	padding: 0;
 	border-radius: 0;
 	text-align: center;
@@ -152,14 +187,70 @@ p {
 	fill: rgba(125, 122, 117, 1);
 }
 
+.section-title {
+	margin-top: 4rem;
+	margin-bottom: 1rem;
+}
+
+.experience-entry {
+	margin: 2rem 0 4rem;
+}
+
+.company-header {
+	align-items: stretch;
+	margin-bottom: 1.25rem;
+}
+
+.company-logo {
+	display: flex;
+	min-height: 108px;
+	align-items: center;
+	justify-content: center;
+}
+
+.company-logo .image {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.company-copy {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.company-copy > p:first-child {
+	font-size: 1.1rem;
+}
+
+.metadata-row {
+	align-items: flex-start;
+	padding: 1rem 0;
+}
+
+.metadata-row + hr,
+.experience-entry > hr {
+	margin: 0;
+}
+
 .project-title {
 	background: rgb(229, 242, 252);
 	font-size: 16px;
 }
 
 .label {
-	text-align: right;
-	padding-right: 2em;
+	text-align: left;
+	padding-right: 0;
+}
+
+.key-project {
+	margin: 2.5rem 0 4rem;
+}
+
+.key-project-title {
+	margin-top: 1.5rem;
 }
 
 .callout {
@@ -231,6 +322,8 @@ summary {
 	.project-details { break-inside: auto; }
 	.project-intro { break-inside: avoid; }
 	.key-project-section-intro { break-inside: avoid; }
+	.profile-intro { margin: 1.5rem 0 3rem; }
+	.experience-entry, .key-project { margin-bottom: 2.5rem; }
 	.project-details::details-content { display: block; content-visibility: visible; }
 	a { overflow-wrap: anywhere; }
 	img {
@@ -246,6 +339,7 @@ summary {
 
 @media only screen and (max-width: 940px) {
 	body { margin: 2em 20px; }
+	a, p, li, summary { overflow-wrap: anywhere; }
 }
 
 @media only screen and (max-width: 680px) {
@@ -255,6 +349,11 @@ summary {
 	.column { width: 100% !important; overflow: visible; }
 	.column + .column { margin-top: 12px; }
 	.label { padding-right: 0; text-align: left; }
+	.profile-intro { margin: 2rem 0 3.5rem; }
+	.profile-contacts { padding: 1.25rem 0 0; border-top: 1px solid rgba(55, 53, 47, 0.12); border-left: 0; }
+	.company-header { display: block; }
+	.company-logo { min-height: 88px; justify-content: flex-start; }
+	.company-logo .image { justify-content: flex-start; }
 	.image { text-align: left; }
 	.column:has(> .image) > .blank { display: none; }
 	.blank { min-height: 0.5em; }

@@ -205,14 +205,14 @@ p {
 	display: flex;
 	min-height: 108px;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .company-logo .image {
 	display: flex;
 	width: 100%;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .company-copy {

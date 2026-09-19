@@ -231,7 +231,16 @@ p {
 }
 
 .experience-entry .metadata-row {
-	padding: 0.5rem 0;
+	padding: 0.25rem 0;
+}
+
+.experience-entry ul {
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
+}
+
+.experience-entry li + li {
+	margin-top: 0.3em;
 }
 
 .metadata-row + hr,

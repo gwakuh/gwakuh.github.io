@@ -230,6 +230,10 @@ p {
 	padding: 1rem 0;
 }
 
+.experience-entry .metadata-row {
+	padding: 0.5rem 0;
+}
+
 .metadata-row + hr,
 .experience-entry > hr {
 	margin: 0;

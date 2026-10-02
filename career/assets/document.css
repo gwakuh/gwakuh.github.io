@@ -1,5 +1,6 @@
 html {
 	-webkit-print-color-adjust: exact;
+	color-scheme: light;
 }
 
 * {
@@ -24,7 +25,11 @@ body {
 body {
 	line-height: 1.65;
 	white-space: pre-wrap;
-	color: rgb(55, 53, 47);
+	color: #282a30;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	word-break: keep-all;
 }
 
 .blank { min-height: 1.5em; }
@@ -33,7 +38,13 @@ a,
 a:visited {
 	color: inherit;
 	text-decoration: underline;
+	text-decoration-color: #b5bcc8;
+	text-underline-offset: 0.22em;
+	text-decoration-thickness: 1px;
 }
+
+a:hover { color: #0066cc; text-decoration-color: currentColor; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #0066cc; outline-offset: 4px; border-radius: 4px; }
 
 h1,
 h2,
@@ -172,19 +183,17 @@ p {
 }
 
 .sans {
-	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans CJK KR", "Noto Sans KR", "Segoe UI", sans-serif;
 }
 
 .highlight-blue,
 .project-label {
 	background: transparent;
-	color: rgba(56, 125, 201, 1);
-	fill: rgba(56, 125, 201, 1);
+	color: #0066cc;
 }
 
 .company-description {
-	color: rgba(125, 122, 117, 1);
-	fill: rgba(125, 122, 117, 1);
+	color: #686d76;
 }
 
 .section-title {
@@ -249,8 +258,10 @@ p {
 }
 
 .project-title {
-	background: rgb(229, 242, 252);
+	background: #f0f5fc;
 	font-size: 16px;
+	padding: 0.65rem 0.85rem;
+	border-radius: 8px;
 }
 
 .label {
@@ -272,12 +283,12 @@ p {
 	margin: 1.25em 0;
 	padding: 1rem;
 	border-radius: 10px;
-	background: rgb(240, 239, 237);
+	background: #f5f5f7;
 }
 
 .callout-icon {
 	margin-right: 12px;
-	font-size: 1.5em;
+	color: #686d76;
 }
 
 .callout p {
@@ -321,6 +332,40 @@ summary {
 	padding: 0 1rem;
 }
 
+.line-icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 0.45em;
+	vertical-align: -0.12em;
+	flex-shrink: 0;
+}
+
+.callout-icon .line-icon { width: 20px; height: 20px; margin: 3px 0 0; }
+
+@media only screen {
+	html { background: #f5f5f7; }
+	body { max-width: 1040px; margin: 48px auto; padding: 0 24px; color: #282a30; }
+	.page, .draft-index {
+		padding: 64px 56px;
+		background: #fff;
+		border: 1px solid #e5e7eb;
+		border-radius: 20px;
+		box-shadow: 0 8px 32px rgba(28, 32, 40, 0.04);
+	}
+	.page-title { letter-spacing: -0.045em; line-height: 1.3; color: #1d1d1f; }
+	.person-name { font-size: 1.75rem; letter-spacing: -0.035em; }
+	.section-title { font-size: 1.5rem; letter-spacing: -0.025em; }
+	.section-title .highlight-blue { color: #1d1d1f; }
+	.section-title .line-icon { color: #6e7785; }
+	.company-description em { font-style: normal; }
+	hr { border-bottom-color: #e9ebef; }
+	li::marker { color: #8b929c; }
+	summary { font-weight: 500; }
+	summary::marker { color: #89919d; font-size: 0.8em; }
+	.year-month { font-variant-numeric: tabular-nums; }
+}
+
 @media only print {
 	body { margin: 0; font-size: 12pt; }
 	.column { overflow: visible; }
@@ -351,12 +396,15 @@ summary {
 }
 
 @media only screen and (max-width: 940px) {
-	body { margin: 2em 20px; }
+	body { margin: 24px auto; padding: 0 20px; }
+	.page, .draft-index { padding: 40px 32px; }
 	a, p, li, summary { overflow-wrap: anywhere; }
 }
 
 @media only screen and (max-width: 680px) {
-	body { margin: 24px 16px; }
+	html { background: #fff; }
+	body { margin: 0; padding: 0; }
+	.page, .draft-index { padding: 32px 20px; border: 0; border-radius: 0; box-shadow: none; }
 	.page-title { font-size: 2rem; }
 	.column-list { display: block; }
 	.column { width: 100% !important; overflow: visible; }

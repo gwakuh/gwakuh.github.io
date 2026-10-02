@@ -1,8 +1,8 @@
 // Temporary mobile review control. Remove this file and its build references after review.
-if (window.matchMedia('(max-width: 680px)').matches) {
+{
   const viewport = document.querySelector('meta[name="viewport"]');
   const originalViewport = viewport.content;
-  const mobileWidth = document.documentElement.clientWidth;
+  const mobileWidth = Math.min(document.documentElement.clientWidth, window.screen.width);
   const desktopWidth = 1200;
   let desktop = false;
 
